@@ -1,14 +1,14 @@
 <?php
 	require('connect.php');
     // If the values are posted, insert them into the database.
-    if(isset($_POST) & !empty($_POST)){
-			$username = mysqli_real_escape_string($connection, $_POST['username']);
-			$firstname = mysqli_real_escape_string($connection, $_POST['firstname']);
-			$lastname = mysqli_real_escape_string($connection, $_POST['lastname']);
-			$email = mysqli_real_escape_string($connection, $_POST['email']);
-			$password = md5($_POST['password']);
+    if (isset($_POST['username']) && isset($_POST['password'])){
+        $username = mysqli_real_escape_string($_POST['username']);
+        $firstname = mysqli_real_escape_string($_POST['email']);
+        $lastname = mysqli_real_escape_string($_POST['firstname']);
+	      $email = mysqli_real_escape_string($_POST['lastname']);
+        $password = md5($_POST['password']);
 
-        $query = "INSERT INTO `login` (username, firstname, lastname, email, password) VALUES ('$username', '$firstname', '$lastname', '$email', '$password')";
+        $query = "INSERT INTO `login` (username, firstname, lastname, password, email) VALUES ('$username', '$firstname', '$lastname', '$email', '$password')";
         $result = mysqli_query($connection, $query);
         if($result){
             $smsg = "User Created Successfully.";
@@ -52,29 +52,23 @@
       <div class "form-group">
 	      <input type="text" name="username" class="form-control input-lg" placeholder="Username" required>
       </div>
-			<br>
       <div class "form-group">
         <input type="text" name="firstname" id="inputFirstName" class="form-control input-lg" placeholder="First Name" required>
       </div>
-			<br>
       <div class "form-group">
         <input type="text" name="lastname" id="inputLastName" class="form-control input-lg" placeholder="Last Name" required>
         </div>
-				<br>
         <div class "form-group">
         <input type="email" name="email" id="inputEmail" class="form-control input-lg" placeholder="Email address" required autofocus>
         </div>
-				<br>
         <div class "form-group">
         <input type="password" name="password" id="inputPassword" class="form-control input-lg" placeholder="Password" required>
         </div>
-				<br>
         <div class "form-group">
         <button class="btn btn-default btn-lg btn-block btn-success" type="submit">Register</button>
         </div>
-				<br>
         <div class "form-group">
-        <a class="btn btn-default btn-lg btn-block btn-success" href="login.php">Login</a>
+        <a class="btn btn-default btn-lg btn-block btn-success" href="index.html">Login</a>
         </div>
       </form>
         </div>
