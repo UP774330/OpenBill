@@ -1,16 +1,20 @@
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Account</title>
- 
+    <title>Bootstrap 101 Template</title>
+
     <!-- Bootstrap -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-      <link href="css/maincss.css" rel="stylesheet">
- 
+		<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" >
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" >
+
+<link rel="stylesheet" href="css/maincss.css">
+
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -26,24 +30,34 @@
               <div class="form-group text-center">
                 <div class="logo">
                     <p>Open Bill</p>
-					<p>Account</p>
                 </div>
               </div>
+              <div class="form-group">
+                <input type="text" class="form-control input-lg" id="userid" placeholder="Username">
+              </div>
 			  <div class="form-group">
-                <a class="btn btn-default btn-lg btn-block btn-success"href="#">Change Password</a>
+                <input type="firstname" class="form-control input-lg" id="firstName" placeholder="First Name">
+              </div>
+			  <div class="form-group">
+                <input type="last name" class="form-control input-lg" id="lastname" placeholder="Last Name">
               </div>
               <div class="form-group">
-                <a class="btn btn-default btn-lg btn-block btn-success"href="#">Change Email</a>
+                <input type="emailaddress" class="form-control input-lg" id="emailAddress" placeholder="Email Address">
+              </div>
+			  <div class="form-group">
+                <input type="password" class="form-control input-lg" id="password" placeholder="Password">
+              </div>
+              <div class="form-group">
+                <button type="submit" class="btn btn-default btn-lg btn-block btn-success">Submit</button>
               </div>
               <div class="form-group last-row">
-                <a href="menu.html" class="pull-right">Menu</a>
-				<a href="index.html" class="pull-left">Sign Out</a>
+                <a href="index.html" class="pull-right">Sign In</a>
               </div>
             </form>
         </div>
     </div>
 </div>
- 
+
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
