@@ -2,11 +2,11 @@
 	require('connect.php');
     // If the values are posted, insert them into the database.
     if (isset($_POST['username']) && isset($_POST['password'])){
-        $username = $_POST['username'];
-        $firstname = $_POST['email'];
-        $lastname = $_POST['firstname'];
-	      $email = $_POST['lastname'];
-        $password = $_POST['password'];
+        $username = mysqli_real_escape_string($_POST['username']);
+        $firstname = mysqli_real_escape_string($_POST['email']);
+        $lastname = mysqli_real_escape_string($_POST['firstname']);
+	      $email = mysqli_real_escape_string($_POST['lastname']);
+        $password = md5($_POST['password']);
 
         $query = "INSERT INTO `login` (username, firstname, lastname, password, email) VALUES ('$username', '$firstname', '$lastname', '$email', '$password')";
         $result = mysqli_query($connection, $query);
