@@ -9,7 +9,11 @@
 		if ($result->num_rows > 0) {
    		 // output data of each row
     		while($row = $result->fetch_assoc()) {
-    		$name = $row["billName"]. $date = $row["billDate"]. $payers = $row["billPayers"]. $Percent = $row["billPercent"]. $total = $row["billTotal"];
+    		$name = $row["billName"];
+			$date = $row["billDate"];
+			$payers = $row["billPayers"];
+			$Percent = $row["billPercent"];
+			$total = $row["billTotal"];
    			}
 		} else {
     		echo "No New Bills";
@@ -39,19 +43,18 @@
     <div class="container">
     <div class="row login">
         <div class="col-md-4 col-md-offset-4 col-sm-6 col-sm-offset-3 well">
-            <form role="form">
               <div class="form-group text-center">
                 <div class="logo">
                     <p>Open Bill</p>
 					<p>Bill History</p>
                 </div class="history">
-				<table id="myTable">
+				<table width="368" id="myTable">
 				<tr>
-					<td>Bill Name</td>
-					<td>Date</td>
-					<td>Payers</td>
-					<td>Percentage</td>
-					<td>Total</td>
+					<td width="70">Bill Name</td>
+					<td width="45">Date</td>
+					<td width="56">Payers</td>
+					<td width="85">Percentage</td>
+					<td width="88">Total</td>
 				</tr>
 				<tr>
 					<td><?php echo"$name" ?></td>
@@ -70,7 +73,6 @@
                 <a href="menu.html" class="pull-right">Menu</a>
 				<a href="index.php" class="pull-left">Sign Out</a>
               </div>
-            </form>
         </div>
     </div>
 </div>
