@@ -74,7 +74,7 @@
         </div>
 				<br>
         <div class "form-group">
-        <a class="btn btn-default btn-lg btn-block btn-success" href="login.php">Login</a>
+        <a class="btn btn-default btn-lg btn-block btn-success" href="index.php">Login</a>
         </div>
       </form>
         </div>

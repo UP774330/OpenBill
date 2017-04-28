@@ -74,7 +74,7 @@ require('connect.php');
               </div>
 			  <div class="form-group last-row">
                 <a href="menu.html" class="pull-right">Menu</a>
-				<a href="index.html" class="pull-left">Sign Out</a>
+				<a href="logout.php" class="pull-left">Sign Out</a>
               </div>
 
             </form>
