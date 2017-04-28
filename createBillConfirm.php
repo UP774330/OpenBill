@@ -1,5 +1,25 @@
 <?php
+	
+	require('connect.php');
+    /* Enters the data the user inputs into the database, saving the created bill. */
+    if(isset($_POST) & !empty($_POST)){
+			$billName = mysqli_real_escape_string($connection, $_POST['billName']);
+			$totalCost = mysqli_real_escape_string($connection, $_POST['totalCost']);
+			$date = mysqli_real_escape_string($connection, $_POST['dueDate']);
+			$payers = mysqli_real_escape_string($connection, $_POST['payers']);
+			$percent =  mysqli_real_escape_string($connection, $_POST['percentage']);
 
+        $query = "INSERT INTO "; /* Not sure what to put to finish this line, need database information */
+        $result = mysqli_query($connection, $query);
+        if($result){
+            $smsg = "The bill was saved";
+        }else{
+            $fmsg ="Failed to save bill";
+        }
+    }
+	
+	/* Temp variables for html format */
+	
 	$total = $_POST['totalCost'];
 	$name = $_POST['billName'];
 	$date = $_POST['dueDate'];
@@ -9,6 +29,7 @@
 	$x = ($total / 100) * $percent;
 
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
