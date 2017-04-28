@@ -48,6 +48,7 @@
                     <p>Open Bill</p>
 					<p>Bill History</p>
                 </div class="history">
+				<div>
 				<table width="368" id="myTable">
 				<tr>
 					<td width="70">Bill Name</td>
@@ -64,8 +65,6 @@
 					<td><?php echo"$total" ?></td>
 				</tr>
 				</table>
-				<div>
-				
 				</div>
               </div>
               <div class="form-group last-row">
