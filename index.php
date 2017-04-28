@@ -1,14 +1,10 @@
 <?php
-/* Initiates connect.php and sets the variables to log in, encrypting the password. */
-
 session_start();
 require_once('connect.php');
 if(isset($_POST) & !empty($_POST)){
   $username = mysqli_real_escape_string($connection, $_POST['username']);
   $password = md5($_POST['password']);
 
- /* Checks if username and password matches with username and password from the database. */
-  
   $sql = "SELECT * FROM login WHERE username='$username' AND password='$password'";
   $result = mysqli_query($connection, $sql);
   $count = mysqli_num_rows($result);
@@ -19,8 +15,6 @@ if(isset($_POST) & !empty($_POST)){
     }
   }
 
- /* Once logged in, redirects the user to the main menu. */
-  
 if(isset($_SESSION['username'])){
   $username = $_SESSION['username'];
   header('Location: menu.html');
