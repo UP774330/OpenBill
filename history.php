@@ -42,13 +42,13 @@
   <body>
     <div class="container">
     <div class="row login">
-        <div class="col-md-4 col-md-offset-4 col-sm-6 col-sm-offset-3 well">
+        <div class="col-md-6 col-md-offset-2 col-sm-7 col-sm-offset-2 well">
               <div class="form-group text-center">
                 <div class="logo">
                     <p>Open Bill</p>
 					<p>Bill History</p>
                 </div class="history">
-				<div>
+				<div><center>
 				<table width="368" id="myTable">
 				<tr>
 					<td width="70">Bill Name</td>
@@ -65,7 +65,7 @@
 					<td><?php echo"$total" ?></td>
 				</tr>
 				</table>
-				</div>
+				</div></center>
               </div>
               <div class="form-group last-row">
 
