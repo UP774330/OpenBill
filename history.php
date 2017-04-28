@@ -16,7 +16,6 @@
 		}
 	?>
 
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -24,11 +23,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Bill History</title>
- 
+
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
       <link href="css/maincss.css" rel="stylesheet">
- 
+
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -45,19 +44,37 @@
                 <div class="logo">
                     <p>Open Bill</p>
 					<p>Bill History</p>
-                    </div>
-                 <div>  </div> <!-- Put Bill Here  -->
+                </div class="history">
+				<table id="myTable">
+				<tr>
+					<td>Bill Name</td>
+					<td>Date</td>
+					<td>Payers</td>
+					<td>Percentage</td>
+					<td>Total</td>
+				</tr>
+				<tr>
+					<td><?php echo"$name" ?></td>
+					<td><?php echo"$date" ?></td>
+					<td><?php echo"$payers" ?></td>
+					<td><?php echo"$percent" ?></td>
+					<td><?php echo"$total" ?></td>
+				</tr>
+				</table>
+				<div>
+				
+				</div>
               </div>
               <div class="form-group last-row">
-     
+
                 <a href="menu.html" class="pull-right">Menu</a>
-				<a href="index.html" class="pull-left">Sign Out</a>
+				<a href="index.php" class="pull-left">Sign Out</a>
               </div>
             </form>
         </div>
     </div>
 </div>
- 
+
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
