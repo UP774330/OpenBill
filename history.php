@@ -1,10 +1,19 @@
 <?php
 
 	require('connect.php');
-
+	
 	$sql = "SELECT billName, billDate, billPayers, billPercent, billTotal FROM billhistory";
-
+	
 	$result = mysqli_query($connection, $sql);
+	
+	if ($result->num_rows > 0) {
+    // output data of each row
+    while($row = $result->fetch_assoc()) {
+        echo "Bill Name: " . $row["billName"]. "Date: " . $row["billDate"]. "Payers: " . $row["billPayers"]. "Percent per person: " .  $row["billPercent"]. "Bill Total: " .  $row["billTotal"]. "<br>";
+    }
+	} else {
+    echo "No Bills";
+	}
 ?>
 
 <!DOCTYPE html>
@@ -14,11 +23,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Bill History</title>
-
+ 
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
       <link href="css/maincss.css" rel="stylesheet">
-
+ 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -35,19 +44,18 @@
                 <div class="logo">
                     <p>Open Bill</p>
 					<p>Bill History</p>
-                    <?php echo"$result" ?>
                 </div>
               </div>
               <div class="form-group last-row">
-
+     
                 <a href="menu.html" class="pull-right">Menu</a>
-				<a href="logout.php" class="pull-left">Sign Out</a>
+				<a href="index.html" class="pull-left">Sign Out</a>
               </div>
             </form>
         </div>
     </div>
 </div>
-
+ 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
