@@ -1,21 +1,3 @@
-<?php
-
-	require('connect.php');
-	
-	$sql = "SELECT billName, billDate, billPayers, billPercent, billTotal FROM billhistory";
-	
-	$result = mysqli_query($connection, $sql);
-	
-	if ($result->num_rows > 0) {
-    // output data of each row
-    while($row = $result->fetch_assoc()) {
-        echo "Bill Name: " . $row["billName"]. "Date: " . $row["billDate"]. "Payers: " . $row["billPayers"]. "Percent per person: " .  $row["billPercent"]. "Bill Total: " .  $row["billTotal"]. "<br>";
-    }
-	} else {
-    echo "No Bills";
-	}
-?>
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -44,6 +26,23 @@
                 <div class="logo">
                     <p>Open Bill</p>
 					<p>Bill History</p>
+    <?php
+
+		require('connect.php');
+	
+		$sql = "SELECT billName, billDate, billPayers, billPercent, billTotal FROM billhistory";
+	
+		$result = mysqli_query($connection, $sql);
+	
+		if ($result->num_rows > 0) {
+   		 // output data of each row
+    		while($row = $result->fetch_assoc()) {
+       			 echo "Bill Name: " . $row["billName"]. "<br>" . "Date: " . $row["billDate"]. "<br>". "Payers: " . $row["billPayers"]. "<br>". "Percent per person: " .  $row["billPercent"]. "<br>". "Bill Total: " .  $row["billTotal"]. "<br>";
+   			}
+		} else {
+    		echo "No Bills";
+		}
+	?>
                 </div>
               </div>
               <div class="form-group last-row">
