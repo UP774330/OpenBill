@@ -15,7 +15,7 @@ if(isset($_POST) & !empty($_POST)){
 		$to = $r['email'];
 		$subject = "Your Recovered Password";
 		$body = "Please use this password to login " . $password;
-
+		
 		if(mail($to, $subject, $body, $from)){
 			$smsg = "Your new password has been sent to your email!";
 		}else{
@@ -41,7 +41,7 @@ if(isset($_POST) & !empty($_POST)){
 
 	<link rel="stylesheet" type="text/css" href="styles.css">
 	<link href="css/maincss.css" rel="stylesheet">
-
+	
 </head>
 <body>
 <div class="container">
@@ -55,7 +55,7 @@ if(isset($_POST) & !empty($_POST)){
 		  <input type="text" name="username" class="form-control" placeholder="Username" required>
 		</div>
         <button class="btn btn-lg btn-primary btn-block" type="submit">Forgot Password</button>
-        <a class="btn btn-lg btn-primary btn-block" href="index.php">Login</a>
+        <a class="btn btn-lg btn-primary btn-block" href="register.php">Register</a>
       </form>
 </div>
 </body>

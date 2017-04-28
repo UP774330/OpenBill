@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Login</title>
+    <title>Create Bill Confirmation</title>
  
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -16,8 +16,6 @@
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-	
-	  
   </head>
   <body>
     <div class="container">
@@ -27,22 +25,23 @@
               <div class="form-group text-center">
                 <div class="logo">
                     <p>Open Bill</p>
-					<p>Change Email</p>
+					<p>You have successfully created a new bill<p>
                 </div>
               </div>
-              <div class="form-group">
-                <input type="text" class="form-control input-lg" name="oldEmail" id="oldEmail" placeholder="Old Email">
+			  <div class="form-group">
+                <a class="btn btn-default btn-lg btn-block btn-success"href="#">Pay Bill Now</a>
               </div>
-              <div class="form-group">
-                <input type="text" class="form-control input-lg" name="newEmail" id="newEmail" placeholder="New Email">
+			  <div class="form-group">
+                <a class="btn btn-default btn-lg btn-block btn-success"href="savebill.html">Pay Bill Later</a>
               </div>
-              <div class="form-group">
-                <button type="submit" class="btn btn-default btn-lg btn-block btn-success">Submit</button>
+			  <div class="form-group">
+                <a class="btn btn-default btn-lg btn-block btn-success"href="emailbill.html">Email Bill</a>
               </div>
-              <div class="form-group last-row">
+			  <div class="form-group last-row">
                 <a href="menu.html" class="pull-right">Menu</a>
 				<a href="index.html" class="pull-left">Sign Out</a>
               </div>
+              
             </form>
         </div>
     </div>
