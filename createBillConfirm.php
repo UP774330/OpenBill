@@ -12,6 +12,7 @@ require('connect.php');
 		/* Inserts the data from the bill into the database to be stored */
 
 			$query = "INSERT INTO billhistory (billName, billDate, billPayers, billPercent, billTotal) VALUES ('$billName', '$date', '$payers', '$percent', '$totalCost')";
+			$result = mysqli_query($connection, $query);
 			if($result){
 					$smsg = "The bill was saved";
 			}else{
