@@ -10,8 +10,8 @@
     border: solid #ddd 14px;
 }
 .logo {
-    margin-top:27px;
-    margin-bottom:54px;
+    margin-top:2% ;
+    margin-bottom:5%;
 }
 
 .last-row {
@@ -23,4 +23,21 @@
 }
 
 body{
-    background-color: #ff3333
+    background-color: #ff3333;
+}
+
+p{
+	font-family: "Times New Roman", Times, serif;
+	font-size: 30px;
+}
+table{
+	width:100%;
+	
+}
+table, td {
+	text-align: center;
+	float: center;
+    border: 1px solid black;
+	background: white;
+	padding:2%;
+}

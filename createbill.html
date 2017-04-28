@@ -1,1 +1,113 @@
 
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Create A Bill</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+      <link href="css/maincss.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  <script>
+
+  function Validate(){
+
+	  var cost = document.getElementById('totalCost');
+	  var name = document.getElementById('billName');
+	  var date = document.getElementById('dueDate');
+	  var payers = document.getElementById('payers');
+	  var percent = document.getElementById('percentage');
+
+	 if (cost.value == ''){
+		  alert('Please enter total cost of bill');
+		  return false;
+		  }
+	 if (cost.value <= 0){
+		  alert('Please enter an amount larger then 0 in Total Cost');
+		  return false;
+		  }
+	 if (name.value == ''){
+		  alert('Please enter a name for the bill');
+		  return false;
+		  }
+	 if (date.value == ''){
+		  alert('Please enter a date for the bill');
+		  return false;
+		  }
+	 if (payers.value == ''){
+		  alert('Please enter the number of people paying the bill');
+		  return false;
+		  }
+	 if (payers.value <= 0){
+		  alert('Please enter an amount larger then 0 in Payers');
+		  return false;
+		  }
+	 if (percent.value == ''){
+		  alert('Please enter the percentage each person will pay.');
+		  return false;
+		  }
+	 if (percent.value <= 0){
+		  alert('Please enter an amount larger then 0 in Percentage');
+		  return false;
+		  }
+	 if (percent.value >= 101){
+		  alert('Percentage can not be bigger then 100');
+		  return false;
+		  }
+
+  }
+  </script>
+
+
+  </head>
+  <body>
+    <div class="container">
+    <div class="row login">
+        <div class="col-md-4 col-md-offset-4 col-sm-6 col-sm-offset-3 well">
+              <div class="form-group text-center">
+                <div class="logo">
+                    <p>Open Bill</p>
+                </div>
+              </div>
+              <form onsubmit="return Validate()" action="createBillConfirm.php" method="post" role="form">
+              <div class="form-group">
+                <input type="total cost" class="form-control input-lg" id="totalCost" name="totalCost" placeholder="Total Cost">
+                </div>
+            <div class="form-group">
+                <input type="bill name" class="form-control input-lg" id="billName" name="billName" placeholder="Bill Name/Id">
+           </div>
+           <div class="form-group">
+                <input type="due date" class="form-control input-lg" name="dueDate" id="dueDate" placeholder="Due Date">
+               </div>
+               <div class="form-group">
+                <input type="Payers" class="form-control input-lg" name="payers" id="payers" placeholder="Number of Payers">
+              </div>
+              <div class="form-group">
+                <input type="percentage" class="form-control input-lg" name="percentage" id="percentage" placeholder="Percentage to Pay">
+             </div>
+                <button type="submit" class="btn btn-default btn-lg btn-block btn-success">Submit</button>
+                </form>
+              <br/>
+              <div class="form-group last-row">
+                <a href="menu.html" class="pull-right">Menu</a>
+				<a href="logout.php" class="pull-left">Sign Out</a>
+              </div>
+        </div>
+    </div>
+</div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>

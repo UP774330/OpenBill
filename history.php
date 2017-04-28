@@ -1,15 +1,34 @@
+<?php
+
+		require('connect.php');
+	
+		$sql = "SELECT billName, billDate, billPayers, billPercent, billTotal FROM billhistory";
+	
+		$result = mysqli_query($connection, $sql);
+	
+		if ($result->num_rows > 0) {
+   		 // output data of each row
+    		while($row = $result->fetch_assoc()) {
+    		$name = $row["billName"]. $date = $row["billDate"]. $payers = $row["billPayers"]. $Percent = $row["billPercent"]. $total = $row["billTotal"];
+   			}
+		} else {
+    		echo "No New Bills";
+		}
+	?>
+
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Menu</title>
-
+    <title>Bill History</title>
+ 
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
       <link href="css/maincss.css" rel="stylesheet">
-
+ 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -25,31 +44,20 @@
               <div class="form-group text-center">
                 <div class="logo">
                     <p>Open Bill</p>
-					<p>Menu</p>
-                </div>
-              </div>
-              <div class="form-group">
-                <a class="btn btn-default btn-lg btn-block btn-success"href="createbill.html">Create A New Bill</a>
-              </div>
-			  <div class="form-group">
-                <a class="btn btn-default btn-lg btn-block btn-success"href="history.html">Bill History</a>
-              </div>
-			  <div class="form-group">
-                <a class="btn btn-default btn-lg btn-block btn-success"href="pending.html">Pending Bills</a>
-              </div>
-			  <div class="form-group">
-                <a class="btn btn-default btn-lg btn-block btn-success"href="account.html">Account</a>
+					<p>Bill History</p>
+                    </div>
+                 <div>  </div> <!-- Put Bill Here  -->
               </div>
               <div class="form-group last-row">
-
+     
                 <a href="menu.html" class="pull-right">Menu</a>
-				<a href="index.php" class="pull-left">Sign Out</a>
+				<a href="index.html" class="pull-left">Sign Out</a>
               </div>
             </form>
         </div>
     </div>
 </div>
-
+ 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
