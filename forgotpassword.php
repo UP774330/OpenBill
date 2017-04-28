@@ -27,12 +27,11 @@ if(isset($_POST) & !empty($_POST)){
 	}
 }
 
-
 ?>
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Forgot Password in PHP & MySQL</title>
+	<title>Open Bill - Forgot Password</title>
 	<!-- Latest compiled and minified CSS -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" >
 
@@ -44,19 +43,37 @@ if(isset($_POST) & !empty($_POST)){
 
 </head>
 <body>
-<div class="container">
-      <?php if(isset($smsg)){ ?><div class="alert alert-success" role="alert"> <?php echo $smsg; ?> </div><?php } ?>
-      <?php if(isset($fmsg)){ ?><div class="alert alert-danger" role="alert"> <?php echo $fmsg; ?> </div><?php } ?>
-	  <?php if(isset($f2msg)){ ?><div class="alert alert-danger" role="alert"> <?php echo $f2msg; ?> </div><?php } ?>
-      <form class="form-signin" method="POST">
-        <h2 class="form-signin-heading">Forgot Password</h2>
-        <div class="input-group">
-		  <span class="input-group-addon" id="basic-addon1">@</span>
-		  <input type="text" name="username" class="form-control" placeholder="Username" required>
-		</div>
-        <button class="btn btn-lg btn-primary btn-block" type="submit">Forgot Password</button>
-        <a class="btn btn-lg btn-primary btn-block" href="index.php">Login</a>
-      </form>
-</div>
+	<div class="container">
+		<?php if(isset($smsg)){ ?><div class="alert alert-success" role="alert"> <?php echo $smsg; ?> </div><?php } ?>
+		<?php if(isset($fmsg)){ ?><div class="alert alert-danger" role="alert"> <?php echo $fmsg; ?> </div><?php } ?>
+		<?php if(isset($f2msg)){ ?><div class="alert alert-danger" role="alert"> <?php echo $f2msg; ?> </div><?php } ?>
+	  <div class="row login">
+	      <form class="form-signin" method="POST">
+	        <div class="col-md-4 col-md-offset-4 col-sm-6 col-sm-offset-3 well">
+	          <div role="form">
+	            <div class="form-group text-center">
+	              <div class="logo">
+	                <p>Open Bill</p>
+	              </div>
+
+	      <br>
+	        <div class "form-group">
+	        <input type="text" name="username" id="username" class="form-control input-lg" placeholder="Username" required>
+	        </div>
+	        <br>
+					<div class "form-group">
+					<button class="btn btn-default btn-lg btn-block btn-success" type="submit">Forgot Password</button>
+					<br>
+					</div>
+					<div class="form-group">
+									<a class="btn btn-default btn-lg btn-block btn-success"href="index.php">Login</a>
+								</div>
+	        <br>
+	      </form>
+	        </div>
+	      </div>
+	    </div>
+	  </div>
+	</div>
 </body>
 </html>
