@@ -3,7 +3,8 @@
 	require('connect.php');
 	
 	$sql = "SELECT billName, billDate, billPayers, billPercent, billTotal FROM billhistory";
-
+	
+	$result = mysqli_query($connection, $sql);
 ?>
 
 <!DOCTYPE html>
@@ -34,7 +35,7 @@
                 <div class="logo">
                     <p>Open Bill</p>
 					<p>Bill History</p>
-                    <?php echo"$sql" ?>
+                    <?php echo"$result" ?>
                 </div>
               </div>
               <div class="form-group last-row">
