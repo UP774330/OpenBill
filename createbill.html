@@ -27,24 +27,40 @@
 	  var payers = document.getElementById('payers');
 	  var percent = document.getElementById('percentage');
 	  
-	  if (cost.value == ''){
-		  alert('please enter total cost of bill');
+	 if (cost.value == ''){
+		  alert('Please enter total cost of bill');
+		  return false;
+		  }
+	 if (cost.value <= 0){
+		  alert('Please enter an amount larger then 0 in Total Cost');
 		  return false;
 		  }
 	 if (name.value == ''){
-		  alert('please enter a name for the bill');
+		  alert('Please enter a name for the bill');
 		  return false;
 		  }
 	 if (date.value == ''){
-		  alert('please enter a date for the bill');
+		  alert('Please enter a date for the bill');
 		  return false;
 		  }
 	 if (payers.value == ''){
-		  alert('please enter the number of people paying the bill');
+		  alert('Please enter the number of people paying the bill');
+		  return false;
+		  }
+	 if (payers.value <= 0){
+		  alert('Please enter an amount larger then 0 in Payers');
 		  return false;
 		  }
 	 if (percent.value == ''){
-		  alert('please enter the percentage each person will pay.');
+		  alert('Please enter the percentage each person will pay.');
+		  return false;
+		  }
+	 if (percent.value <= 0){
+		  alert('Please enter an amount larger then 0 in Percentage');
+		  return false;
+		  }
+	 if (percent.value >= 101){
+		  alert('Percentage can not be bigger then 100');
 		  return false;
 		  }
   
