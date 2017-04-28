@@ -49,13 +49,13 @@
 					<p>Bill History</p>
                 </div class="history">
 				<div><center>
-				<table width="368" id="myTable">
+				<table width="368" id="historyTable" border="1">
 				<tr>
-					<td width="70">Bill Name</td>
-					<td width="45">Date</td>
-					<td width="56">Payers</td>
-					<td width="85">Percentage</td>
-					<td width="88">Total</td>
+					<td width="70"><strong>Bill Name</strong></td>
+					<td width="45"><strong>Date</strong></td>
+					<td width="56"><strong>Payers</strong></td>
+					<td width="85"><strong>Percentage</strong></td>
+					<td width="88"><strong>Total</strong></td>
 				</tr>
 				<tr>
 					<td><?php echo"$name" ?></td>
