@@ -12,7 +12,7 @@
     		$name = $row["billName"];
 			$date = $row["billDate"];
 			$payers = $row["billPayers"];
-			$Percent = $row["billPercent"];
+			$percent = $row["billPercent"];
 			$total = $row["billTotal"];
    			}
 		} else {
